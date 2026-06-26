@@ -1,0 +1,14 @@
+{
+  "name": "LinuxDesktop",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Linux Desktop",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "bash /usr/local/bin/startup.sh"
+}

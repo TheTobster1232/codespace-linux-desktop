@@ -4,7 +4,10 @@
 cat <<EOF > /root/.vnc/xstartup
 #!/bin/sh
 xrdb $HOME/.Xresources
-startxfce4 &
+export XDG_CURRENT_DESKTOP=Pantheon
+export XDG_SESSION_DESKTOP=Pantheon
+export XDG_SESSION_TYPE=x11
+exec pantheon-session &
 EOF
 
 chmod +x /root/.vnc/xstartup

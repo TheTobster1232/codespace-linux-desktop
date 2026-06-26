@@ -1,7 +1,6 @@
-FROM ubuntu:22.04
+FROM elementary/docker:stable
 
 RUN apt update && apt install -y \
-    xfce4 xfce4-goodies \
     tigervnc-standalone-server \
     novnc websockify \
     xterm \
